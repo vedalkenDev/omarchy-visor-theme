@@ -20,5 +20,9 @@ if ! python3 "$here/patch-lockview.py" "$dir/LockView.qml"; then
   exit 1
 fi
 rm -f "$dir/LockView.qml.orig"
+# Remember which Omarchy lock code this copy came from, for refresh-visor-lock.sh.
+src=$(omarchy-plugin-catalog | jq -r '.[] | select(.firstParty and .id == "omarchy.lock") | .sourceDir')
+mkdir -p "$HOME/.local/state/omarchy"
+(cd "$src" && cat -- *.qml manifest.json | sha256sum | cut -d' ' -f1) >"$HOME/.local/state/omarchy/visor-lock.source"
 omarchy-restart-shell
 echo "Done. Preview with: omarchy-shell lock preview   (click to close)"

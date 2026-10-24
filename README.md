@@ -49,7 +49,16 @@ bash extras/lock/install-visor-lock.sh     # turn on
 bash extras/lock/uninstall-visor-lock.sh   # back to Omarchy's lock screen
 ```
 
-This makes a personal copy of Omarchy's lock-screen plugin and changes only how the background is drawn. Password checking is untouched. The catch is that your copy won't get Omarchy's lock-screen updates until you uninstall and reinstall it. If the patch doesn't match your Omarchy version, the script stops and changes nothing.
+This makes a personal copy of Omarchy's lock-screen plugin and changes only how the background is drawn. Password checking is untouched. On its own, your copy won't pick up Omarchy's lock-screen updates, which is what the automatic refresh below is for. If the patch doesn't match your Omarchy version, the script stops and changes nothing.
+
+Turn on the automatic refresh so Omarchy updates never leave it stale:
+
+```
+bash extras/lock/auto-refresh.sh            # turn on
+bash extras/lock/auto-refresh.sh --remove   # turn off
+```
+
+After each `omarchy update`, it checks whether Omarchy changed its lock screen and, if so, rebuilds your copy from the new code. If the new code no longer fits, you get Omarchy's normal lock screen instead of a broken one.
 
 After installing it, check it once: run `omarchy-shell lock preview` (click to close), then lock with `omarchy system lock` and unlock with your password. If unlocking ever fails, press Ctrl+Alt+F2, log in, and run the uninstall script above.
 
@@ -62,6 +71,7 @@ Omarchy doesn't theme Zen. In Settings, under Look and Feel, set the accent colo
 ## Uninstall
 
 ```
+bash extras/lock/auto-refresh.sh --remove
 bash extras/lock/uninstall-visor-lock.sh
 bash extras/shape.sh --remove
 omarchy theme set <another theme>
