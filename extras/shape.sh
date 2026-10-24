@@ -11,7 +11,11 @@ if [[ ${1:-} == --remove ]]; then
 else
   mkdir -p "$dir"
   cp "$here/visor-shape.lua" "$dir/visor-shape.lua"
-  omarchy-hyprland-corners theme >/dev/null
+  # Newer Omarchy has corner toggles that would override this; let the theme decide.
+  if command -v omarchy-hyprland-corners >/dev/null; then omarchy-hyprland-corners theme >/dev/null; fi
+  if [[ -f $dir/window-no-gaps.lua ]]; then
+    echo "Note: your no-gaps toggle is on. It removes borders and corners and wins over Visor."
+  fi
   echo "Visor shape on."
 fi
 hyprctl reload >/dev/null

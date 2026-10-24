@@ -10,4 +10,4 @@ hl.config({
   },
 })
 
-o.transparent_window({ tag = "terminal" }, "1 1")
+o.window({ tag = "terminal" }, { opacity = "1 1" })
