@@ -1,0 +1,7 @@
+# Visor: replaces [tooltip]. 1px hairline, no gradient (the gradient is for the focused window only).
+[tooltip]
+background       = "#242A30"
+background-alpha = 0.97
+text             = "#F4F3E8"
+border           = "#424A51"
+border-alpha     = 1.0

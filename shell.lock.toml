@@ -1,0 +1,16 @@
+# Visor: replaces [lock] (lock-screen password field). The field draws border-active
+# whenever it is not in the error state (shell/plugins/lock/LockView.qml), so both
+# border and border-active are the hairline. Error stays red (#E8806E), now 1px.
+[lock]
+background       = "#242A30"
+background-alpha = 0.8
+text             = "#F4F3E8"
+placeholder      = "#adafa9"
+text-error       = "#E8806E"
+border           = "#424A51"
+border-active    = "#424A51"
+border-error     = "#E8806E"
+border-alpha     = 1.0
+border-width     = 1
+selection        = "#3FB6AF"
+selection-alpha  = 0.45

@@ -1,0 +1,11 @@
+# Visor: replaces the [notifications] section of the generated shell.toml
+# (omarchy-theme-set-templates: apply_shell_section_override). Values are literal hex: template tokens are not expanded in these files.
+# The visor gradient stays on the focused window only; cards get a 1px hairline.
+[notifications]
+background       = "#242A30"
+background-alpha = 1.0
+text             = "#F4F3E8"
+border           = "#424A51"
+border-alpha     = 1.0
+border-width     = 1
+countdown        = "#3FB6AF"

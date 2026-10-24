@@ -1,0 +1,14 @@
+# Visor: replaces [launcher]. hairline colour instead of the inherited active-border gradient. Width stays at the shell default ([launcher]/[menu] have no border-width key in shell.toml.tpl).
+[launcher]
+background                = "#242A30"
+background-alpha          = 0.95
+text                      = "#F4F3E8"
+border                    = "#424A51"
+border-alpha              = 1.0
+scrim                     = "#242A30"
+scrim-alpha               = 0.5
+selected-background       = "#F4F3E8"
+selected-background-alpha = 0.08
+selected-text             = "#3FB6AF"
+selected-border           = "#424A51"
+selected-border-alpha     = 1.0

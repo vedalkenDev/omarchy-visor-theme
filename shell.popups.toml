@@ -1,0 +1,8 @@
+# Visor: replaces [popups] (bar flyouts, OSD, dock popups). 1px hairline, no gradient.
+[popups]
+background       = "#242A30"
+background-alpha = 1.0
+text             = "#F4F3E8"
+border           = "#424A51"
+border-alpha     = 1.0
+border-width     = 1

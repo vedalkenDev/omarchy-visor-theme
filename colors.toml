@@ -1,0 +1,41 @@
+# Visor: Omarchy 4 theme. Charcoal ground, cream text, visor-spectrum accents.
+# Palette: charcoal ground, cream text. Text and ANSI contrast at least 4.73:1 on #242A30.
+# Key set matches Omarchy's own themes (themes/tokyo-night/colors.toml on omacom/omarchy@quattro).
+mode = "dark"
+
+accent = "#3FB6AF"
+selection = "#3B2F5C"
+muted = "#989DA3"  # 4.55:1 on #2E353C, 5.31:1 on #242A30
+
+background = "#242A30"
+dark_background = "#1B2025"
+darker_background = "#14181C"
+lighter_background = "#2E353C"
+
+foreground = "#F4F3E8"
+dark_foreground = "#C9C8BE"
+light_foreground = "#F4F3E8"
+bright_foreground = "#FFFFFF"
+
+red = "#E8806E"
+yellow = "#DDAA78"
+orange = "#FE8046"
+green = "#939E7A"
+cyan = "#3FB6AF"
+blue = "#6FA3CF"
+magenta = "#A6A1E3"
+brown = "#B88A62"
+
+bright_red = "#F0A090"
+bright_yellow = "#F5CF8E"
+bright_green = "#B3BD98"
+bright_cyan = "#6FD3CC"
+bright_blue = "#93BDE0"
+bright_magenta = "#C4BDF0"
+
+# Window borders. Read by the shell ([hyprland] tokens) and, for git installs, by Omarchy's
+# hyprland.lua template. Local installs use hyprland.lua in this folder: keep both in sync.
+# Violet stop lifted #592AA4 -> #825AD5 (3.02:1 on #242A30) so the border's violet corner stays visible.
+# Notifications, popups, polkit and lock use a #424A51 hairline instead (shell.<section>.toml files).
+hyprland_active_border = "rgba(825AD5ff) rgba(3FB6AFff) rgba(D96350ff) 45deg"
+hyprland_inactive_border = "rgba(424A51ff)"

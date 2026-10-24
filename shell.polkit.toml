@@ -1,0 +1,13 @@
+# Visor: replaces [polkit] (password prompts). Same hairline as the other cards.
+[polkit]
+background       = "#242A30"
+background-alpha = 1.0
+text             = "#F4F3E8"
+text-error       = "#E8806E"
+border           = "#424A51"
+border-error     = "#E8806E"
+border-alpha     = 1.0
+border-width     = 1
+scrim            = "#242A30"
+scrim-alpha      = 0.5
+accent           = "#3FB6AF"
